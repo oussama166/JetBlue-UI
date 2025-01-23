@@ -1,8 +1,8 @@
 export interface buttonType {
-    content: string | null,
-    underlineActive: boolean,
-    addChevron: boolean,
-    addIconBefore: boolean,
-    style: string | null
-
+  content?: string | null;
+  underlineActive?: boolean;
+  addChevron?: boolean;
+  addIconBefore?: boolean;
+  style?: string | null;
+  isTrigger?: boolean;
 }
