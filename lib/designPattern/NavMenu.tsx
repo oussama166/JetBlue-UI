@@ -3,6 +3,14 @@ import useClickOutside from "@/Hooks/useClickOutside";
 import React, { useRef } from "react";
 import { cn } from "../utils";
 
+/**
+ * Nav Menu Component is a navigation menu component that can be used to create a dropdown menu.
+ * @param content - The content of the NavMenu
+ * @param children - The children of the NavMenu
+ * @param dropdownContent - The content of the dropdown
+ * @param dropDownStyle - The style of the dropdown
+ * @returns Navigation Menu Component
+ */
 const NavMenu = ({
   content = "",
   children,
@@ -55,10 +63,10 @@ const NavMenu = ({
       <div
         className={cn(
           dropDownStyle,
-          `absolute  top-0 min-h-20 bg-slate-50 z-10  text-black p-5 transition-all duration-500 ease-in-out transform ${
+          `overflow-hidden absolute top-0 min-h-20 bg-slate-50 z-10  text-black p-5 transition-all duration-500 ease-in-out transform ${
             isActive
               ? "translate-y-[67px] opacity-100"
-              : "-translate-y-[200px] opacity-0"
+              : "-translate-y-[2000px] opacity-0"
           }`
         )}>
         {/* Render the dropdown content */}

@@ -1,16 +1,19 @@
 "use client";
 
-import React from "react";
+import BookDropdown from "@/components/UI/BookDropdown";
+import SignInDropDown from "@/components/UI/SignInDropDown";
+import TravelDropdown from "@/components/UI/TravelDropdown";
+import { ActiveButtonProvider } from "@/Hooks/useActiveButton";
+import ButtonLink from "@/lib/designPattern/Button";
+import NavMenu from "@/lib/designPattern/NavMenu";
 import Image from "next/image";
 import { IoCartOutline } from "react-icons/io5";
-import Button from "@/lib/designPattern/Button";
-import { ActiveButtonProvider } from "@/Hooks/useActiveButton";
-import NavMenu from "@/lib/designPattern/NavMenu";
+import { PiUserCircle } from "react-icons/pi";
 
 function Navbar() {
   return (
     <ActiveButtonProvider>
-      <nav className="w-full max-h-40 py-4 bg-[#00205B] inline-flex justify-center gap-52 flex-nowrap mb-5 z-20">
+      <nav className="w-full max-h-40 py-4 bg-[#00205B] inline-flex justify-center gap-52 flex-nowrap  z-20">
         {/* Navigation props */}
         <div className="flex gap-10 justify-end text-white text-xl">
           <div className="mt-1">
@@ -24,7 +27,7 @@ function Navbar() {
           <NavMenu
             content="Book"
             children={
-              <Button
+              <ButtonLink
                 content="Book"
                 underlineActive={true}
                 addChevron={true}
@@ -33,9 +36,9 @@ function Navbar() {
                 isTrigger={true}
               />
             }
-            dropdownContent={bookDropdown()}
+            dropdownContent={<BookDropdown />}
           />
-          <Button
+          <ButtonLink
             content={"Manage Trips"}
             underlineActive={true}
             addChevron={false}
@@ -44,7 +47,7 @@ function Navbar() {
             }
             addIconBefore={false}
           />
-          <Button
+          <ButtonLink
             content={"Check in"}
             underlineActive={true}
             addChevron={false}
@@ -54,10 +57,10 @@ function Navbar() {
             addIconBefore={false}
           />
           <NavMenu
-            content="Travel in"
+            content="Travel Info"
             children={
-              <Button
-                content={"Travel in"}
+              <ButtonLink
+                content={"Travel Info"}
                 style={
                   "inline-flex items-center justify-center cursor-pointer gap-2"
                 }
@@ -67,6 +70,7 @@ function Navbar() {
                 isTrigger={true}
               />
             }
+            dropdownContent={<TravelDropdown />}
           />
         </div>
 
@@ -74,18 +78,25 @@ function Navbar() {
           <NavMenu
             content="Sign In"
             children={
-              <Button
+              <ButtonLink
                 content={"Sign In"}
                 underlineActive={true}
                 addChevron={false}
                 addIconBefore={true}
+                IconBefore={
+                  <PiUserCircle
+                    className={"p-0 group-aria-busy:font-semibold"}
+                    size={"35"}
+                  />
+                }
                 style={
                   "inline-flex items-center justify-center cursor-pointer gap-2"
                 }
                 isTrigger={true}
               />
             }
-            dropDownStyle="w-40"
+            dropDownStyle="max-w-sm w-full -translate-x-[282px]"
+            dropdownContent={<SignInDropDown />}
           />
           <li
             className={
@@ -96,31 +107,6 @@ function Navbar() {
         </div>
       </nav>
     </ActiveButtonProvider>
-  );
-}
-
-export function bookDropdown() {
-  return (
-    <div className="flex gap-10 justify-center text-white text-xl">
-      <div className="flex flex-col justify-center items-center gap-2">
-        <Image
-          src={"assets/NavBarAssets/airplaine.svg"}
-          width={100}
-          height={100}
-          alt="Jetblue flights"
-        />
-        <h1 className="text-blue-700 hover:underline">Flight</h1>
-      </div>
-      <div className="flex flex-col gap-2">
-        <Image
-          src={"assets/NavBarAssets/airplaine.svg"}
-          width={30}
-          height={30}
-          alt="Jetblue flights"
-        />
-        <h1>Flight</h1>
-      </div>
-    </div>
   );
 }
 
