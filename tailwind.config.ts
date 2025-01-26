@@ -13,6 +13,19 @@ export default {
             colors: {
                 background: 'hsl(var(--background))',
                 foreground: 'hsl(var(--foreground))',
+                jetblue: {
+                    50: "#E5EEFF",
+                    100: "#D1E1FF",
+                    200: "#A3C3FF",
+                    300: "#75A5FF",
+                    400: "#4284FF",
+                    500: "#1467FF",
+                    600: "#0050E6",
+                    700: "#0040B8",
+                    800: "#00308A",
+                    900: "#00205B",
+                    950: "#00102E"
+                },
                 card: {
                     DEFAULT: 'hsl(var(--card))',
                     foreground: 'hsl(var(--card-foreground))'

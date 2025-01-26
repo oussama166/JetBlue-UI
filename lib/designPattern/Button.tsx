@@ -18,17 +18,18 @@ import {ForwardedRef, useEffect, useRef} from "react";
  * @return ForwardedRef<Button>
  *
  * */
-export const ButtonLink = ({
-                               content,
-                               style,
-                               underlineActive = false,
-                               addChevron = false,
-                               addIconBefore = false,
+export const ButtonLink = (
+    {
+        content,
+        style,
+        underlineActive = false,
+        addChevron = false,
+        addIconBefore = false,
 
-                               isTrigger = false,
-                               IconAfter,
-                               IconBefore,
-                           }: buttonLinkType) => {
+        isTrigger = false,
+        IconAfter,
+        IconBefore,
+    }: buttonLinkType) => {
     const buttonRef = useRef<HTMLDivElement | null>(null); // Ref for the button
     const {activeButton, setActiveButton, setType, type} = useActiveButton(); // Use the shared context
 
@@ -106,19 +107,20 @@ export const ButtonLink = ({
     );
 };
 
-export const Button = ({
-                           content = "Button", // Default content if none is provided
-                           customStyle = "", // Default to an empty string if no custom styles are passed
-                           color = "Default",
-                           size = "Default",
-                           variant = "Default",
-                           iconBefore = false,
-                           iconBeforeShow = false,
-                           iconAfter = false,
-                           iconAfterShow = false,
-                           isDisabled = false,
-                           onClick,
-                       }: buttonType) => {
+export const Button = (
+    {
+        content = "Button", // Default content if none is provided
+        customStyle = "", // Default to an empty string if no custom styles are passed
+        color = "Default",
+        size = "Default",
+        variant = "Default",
+        iconBefore = false,
+        iconBeforeShow = false,
+        iconAfter = false,
+        iconAfterShow = false,
+        isDisabled = false,
+        onClick,
+    }: buttonType) => {
     /**
      * Variants define the general style of the button
      */
@@ -169,7 +171,7 @@ export const Button = ({
                 userVariant,
                 userSize,
                 userColor
-                )}
+            )}
             onClick={onClick}
             aria-disabled={isDisabled}
         >

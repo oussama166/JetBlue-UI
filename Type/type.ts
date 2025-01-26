@@ -30,6 +30,5 @@ export interface buttonType {
     iconAfter?: ReactNode;
     isDisabled?: boolean,
     iconAfterShow?: boolean;
-    onClick?: ({type, action}: { type: "adult" | "child" | "infant"; action: "increment" | "decrement" }) =>
-        void;
+    onClick?: () => void;
 }

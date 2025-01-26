@@ -1,6 +1,6 @@
-import { Button } from "@/lib/designPattern/Button";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { CiCircleMinus, CiCirclePlus } from "react-icons/ci";
+import {Button} from "@/lib/designPattern/Button";
+import {Dispatch, SetStateAction, useEffect, useState} from "react";
+import {CiCircleMinus, CiCirclePlus} from "react-icons/ci";
 
 function PassengerInfoPanel({
                                 ariaHidden = true,
@@ -62,7 +62,7 @@ function PassengerInfoPanel({
 
         // Proceed with reservation logic
         showUpValue(MessageConstructor());
-        console.log("Reservation successful", { adult, child, infant });
+        console.log("Reservation successful", {adult, child, infant});
     };
 
     // Handle increment/decrement
@@ -102,7 +102,8 @@ function PassengerInfoPanel({
                     break;
             }
         }
-    };;
+    };
+    ;
 
     // Construct the message based on passenger counts
     const MessageConstructor = () => {
@@ -168,7 +169,7 @@ function PassengerInfoPanel({
                     />
                 </div>
             </div>
-            <hr />
+            <hr/>
 
             {/* Child */}
             <div className="flex justify-between items-center">
@@ -203,7 +204,7 @@ function PassengerInfoPanel({
                     />
                 </div>
             </div>
-            <hr />
+            <hr/>
 
             {/* Infant */}
             <div className="flex justify-between items-center">
