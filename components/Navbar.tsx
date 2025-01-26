@@ -1,10 +1,10 @@
 "use client";
 
-import BookDropdown from "@/components/UI/BookDropdown";
-import SignInDropDown from "@/components/UI/SignInDropDown";
-import TravelDropdown from "@/components/UI/TravelDropdown";
+import BookDropdown from "@/components/UI/NavBar/DropDownItems/BookDropdown";
+import SignInDropDown from "@/components/UI/NavBar/DropDownItems/SignInDropDown";
+import TravelDropdown from "@/components/UI/NavBar/DropDownItems/TravelDropdown";
 import { ActiveButtonProvider } from "@/Hooks/useActiveButton";
-import ButtonLink from "@/lib/designPattern/Button";
+import { ButtonLink } from "@/lib/designPattern/Button";
 import NavMenu from "@/lib/designPattern/NavMenu";
 import Image from "next/image";
 import { IoCartOutline } from "react-icons/io5";
