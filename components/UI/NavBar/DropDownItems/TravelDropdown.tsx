@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Airplaine from "@/components/UI/DynamicIcon/Airplaine";
 import Bag from "@/components/UI/DynamicIcon/Bag";
 import Family from "@/components/UI/DynamicIcon/Family";

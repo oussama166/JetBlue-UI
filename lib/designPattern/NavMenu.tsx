@@ -63,7 +63,7 @@ const NavMenu = ({
       <div
         className={cn(
           dropDownStyle,
-          `overflow-hidden absolute top-0 min-h-20 bg-slate-50 z-10  text-black p-5 transition-all duration-500 ease-in-out transform ${
+          `overflow-hidden absolute top-0 min-h-20 bg-slate-50 z-20  text-black p-5 transition-all duration-500 ease-in-out transform ${
             isActive
               ? "translate-y-[67px] opacity-100"
               : "-translate-y-[2000px] opacity-0"

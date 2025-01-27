@@ -5,7 +5,7 @@ import {cn} from "@/lib/utils";
 interface ITextField {
     label: string;
     value?: string;
-    type?: "text" | "date" | "number" | "email";
+    type?: "text" | "date" | "number" | "email" | "password";
     variant?: "outlined" | "filled" | "standard";
     color?: "enabled" | "hovered" | "disabled" | "focused" | "error";
     size?: "sm" | "md";
@@ -68,7 +68,7 @@ export function TextField(
         },
         outlined: {
             container: "border-b h-14",
-            input: "bg-transparent rounded-sm focus:outline-none",
+            input: "border bg-transparent rounded-sm focus:outline-none",
             label: `absolute left-2 px-1 transition-all duration-200 ${
                 isFocused || value
                     ? "top-1 text-xs text-gray-600"
