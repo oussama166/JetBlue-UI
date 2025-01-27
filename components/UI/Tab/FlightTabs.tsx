@@ -22,14 +22,33 @@ function FlightTabs() {
             />
             <Collaps/>
         </div>
-        <div className={"p-2"}>
+        <div className={"p-2 flex flex-nowrap space-x-3"}>
             <TextField
                 label={"From"}
-                value={"Casablanca,Airport Mohamed V"}
+                value={""}
                 variant={"standard"}
                 size={"md"}
-                color={"enabled"}
+                color={"hovered"}
                 type={"text"}
+                disabled={false}
+            />
+            <TextField
+                label={"To"}
+                value={""}
+                variant={"filled"}
+                size={"md"}
+                color={"hovered"}
+                type={"text"}
+                disabled={false}
+            />
+            <TextField
+                label={"To"}
+                value={""}
+                variant={"outlined"}
+                size={"md"}
+                color={"hovered"}
+                type={"text"}
+                disabled={false}
             />
         </div>
     </section>

@@ -17,7 +17,7 @@ function Collaps() {
         [isOpen]
     );
     return (
-        <div className="relative" ref={ref}>
+        <div className="relative z-10" ref={ref}>
             <h1
                 onClick={() => {
                     setIsOpen(!isOpen);
